@@ -1,0 +1,23 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" color="primary" style="margin-top: 100px;direction: rtl">
+
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>صفحه ورود</mat-card-title>
+    </mat-card-header>
+
+    <form class="example-form" (ngSubmit)="login()">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="user.username" matInput placeholder="نام کاربری" [ngModelOptions]="{standalone: true}"/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="user.password" type="password" matInput placeholder="رمز عبور"
+                 [ngModelOptions]="{standalone: true}"/>
+        </mat-form-field>
+      </mat-card-content>
+      <button mat-stroked-button color="accent" class="btn-block">ورود</button>
+    </form>
+  </mat-card>
+
+</div>

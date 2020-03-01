@@ -1,0 +1,42 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" style="margin-top: 100px;direction: rtl">>
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>ثبت نام</mat-card-title>
+    </mat-card-header>
+
+    <form class="example-form" (ngSubmit)="register()">
+
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="user.firstName" matInput placeholder="نام" [ngModelOptions]="{standalone: true}"/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="user.lastName" matInput placeholder="نام خانوادگی" [ngModelOptions]="{standalone: true}"/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="user.email" matInput placeholder="ایمیل" [ngModelOptions]="{standalone: true}"/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="user.mobileNumber" matInput placeholder="شماره همراه"
+                 [ngModelOptions]="{standalone: true}"/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="user.username" matInput placeholder="نام کاربری" [ngModelOptions]="{standalone: true}"/>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input [(ngModel)]="user.password" type="password" matInput placeholder="رمز عبور"
+                 [ngModelOptions]="{standalone: true}"/>
+        </mat-form-field>
+
+      </mat-card-content>
+
+      <button type="submit" mat-stroked-button color="accent" class="btn-block">ثبت نام</button>
+
+    </form>
+  </mat-card>
+</div>
