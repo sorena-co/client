@@ -27,8 +27,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     if (this.tokenService.getToken()) {
       this.isLogin = true;
-    } else {
-      this.router.navigate(['/login']);
     }
   }
 }
