@@ -1,6 +1,11 @@
-<div class="container">
-  <img class="back-ground" src="../../assets/images/back.jpg"/>
-  <h1 class="text-over-image-1">فضایی برای یاد دادن و یاد گرفتن</h1>
-  <h5 class="text-over-image-2">همین الان برای شروع یادگیری و یاد دادن روی دکمه زیر کلیک کنید</h5>
-  <button mat-raised-button color="primary" class="text-over-image-3" [routerLink]="['/register']">ثبت نام</button>
+<div>
+  <div class="container" *ngIf="!isLogin">
+    <img class="back-ground" src="../../assets/images/back.jpg"/>
+    <h1 class="text-over-image-1">فضایی برای یاد دادن و یاد گرفتن</h1>
+    <h5 class="text-over-image-2">همین الان برای شروع یادگیری و یاد دادن روی دکمه زیر کلیک کنید</h5>
+    <button mat-raised-button color="primary" class="text-over-image-3" [routerLink]="['/register']">ثبت نام</button>
+  </div>
+  <div *ngIf="isLogin">
+sadasda
+  </div>
 </div>

@@ -1,6 +1,45 @@
 .toolbar-spacer {
   flex: 1 1 auto;
 }
+
 .icon-spacer {
   padding: 0 14px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.bottom-navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.body{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width : 1920px){
+  .bottom-navbar{
+    visibility:hidden;
+  }
+}
+@media screen and (max-width : 906px){
+  .navbar{
+    visibility:hidden;
+  }
+  .bottom-navbar{
+    visibility:visible;
+  }
+  .body{
+    margin-top: 10px;
+  }
 }
