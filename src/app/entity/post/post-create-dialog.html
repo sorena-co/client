@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>ایجاد پست جدید</h1>
+<div mat-dialog-content>
+  <mat-grid-list cols="3" rowHeight="100px">
+    <mat-grid-tile>
+      <mat-form-field>
+        <mat-label>عنوان</mat-label>
+        <input matInput [(ngModel)]="data.title" required>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile colspan="3">
+      <mat-form-field style="width: 100%;padding-right: 0;">
+        <mat-label>متن</mat-label>
+        <textarea matInput [(ngModel)]="data.content"></textarea>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div style="position: relative">
+        <button #file mat-flat-button color="accent">آپلود فایل
+          <input (change)="onFileSelected($event)"
+                 style="opacity: 0; position:absolute; left:0px; top:0px; width:100%; height:100%;" type="file"/>
+        </button>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <img [src]="imageUrl"/>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

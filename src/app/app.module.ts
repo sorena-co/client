@@ -19,13 +19,18 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-
+import {PostComponent} from './entity/post/post.component';
+import {PostCreateDialogComponent} from './entity/post/post-create-dialog';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    PostComponent,
+    PostCreateDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -40,9 +45,12 @@ import {MatButtonModule} from '@angular/material/button';
     FlexLayoutModule,
     MatCardModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
-  providers: [authInterceptorProviders],
+  providers: [authInterceptorProviders,
+    {provide: MAT_DIALOG_DATA, useValue: {}},
+    {provide: MatDialogRef, useValue: {}}],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
