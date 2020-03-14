@@ -10,7 +10,7 @@
     <mat-grid-tile></mat-grid-tile>
     <mat-grid-tile></mat-grid-tile>
     <mat-grid-tile colspan="3">
-      <mat-form-field style="width: 100%;padding-right: 0;">
+      <mat-form-field style="width: 100%;padding-right: 35px;">
         <mat-label>متن</mat-label>
         <textarea matInput [(ngModel)]="data.content"></textarea>
       </mat-form-field>
@@ -24,7 +24,7 @@
       </div>
     </mat-grid-tile>
   </mat-grid-list>
-  <img [src]="imageUrl"/>
+  <img style="width: 200px;height: 200px" [src]="imageUrl"/>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
